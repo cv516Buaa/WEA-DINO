@@ -44,6 +44,4 @@ If you have any question, please discuss with me by sending email to wanggb@buaa
 
 # References
 Many thanks to their excellent works
-* [MMSegmentation](https://github.com/open-mmlab/mmsegmentation)
-* [MMGeneration](https://github.com/open-mmlab/mmgeneration)
-* [DAFormer](https://github.com/lhoyer/DAFormer)
+* [MMDetection](https://github.com/open-mmlab/mmdetection)
