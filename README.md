@@ -5,47 +5,15 @@ The code of "WEA-DINO: AN IMPROVED DINO WITH WORD EMBEDDING ALIGNMENT FOR REMOTE
 <table>
     <tr>
     <td><img src="PaperFigs\Fig1.png" width = "100%" alt="Cross-Domain RS Semantic Segmentation"/></td>
-    <td><img src="PaperFigs\Fig4.png" width = "100%" alt="ST-DASegNet"/></td>
+    <td><img src="PaperFigs\Fig2.png" width = "100%" alt="WEA-DINO"/></td>
     </tr>
 </table>
 
 ## Dataset Preparation
 
-We select Postsdam, Vaihingen and LoveDA as benchmark datasets and create train, val, test list for researchers to follow. 
+We select Postsdam, Vaihingen and LoveDA as benchmark datasets. Please put the datasets in ./data folder.
 
-**In the following, we provide the detailed commands for dataset preparation.**
-
-**Potsdam**
-     
-     Move the ‘3_Ortho_IRRG.zip’ and ‘5_Labels_all_noBoundary.zip’ to Potsdam_IRRG folder 
-     Move the ‘2_Ortho_RGB.zip’ and ‘5_Labels_all_noBoundary.zip’ to Potsdam_RGB folder
-     python tools/convert_datasets/potsdam.py yourpath/ST-DASegNet/data/Potsdam_IRRG/ --clip_size 512 --stride_size 512
-     python tools/convert_datasets/potsdam.py yourpath/ST-DASegNet/data/Potsdam_RGB/ --clip_size 512 --stride_size 512
-
-**Vaihingen**
-
-     Move the 'ISPRS_semantic_labeling_Vaihingen.zip' and 'ISPRS_semantic_labeling_Vaihingen_ground_truth_eroded_COMPLETE.zip' to Vaihingen_IRRG folder 
-     python tools/convert_datasets/vaihingen.py yourpath/ST-DASegNet/data/Vaihingen_IRRG/ --clip_size 512 --stride_size 256
-
-**LoveDA**
-    
-     Unzip Train.zip, Val.zip, Test.zip and create Train, Val and Test list for Urban and Rural
-
-**Sentinel-2**
-    
-     python tools/convert_datasets/Sentinel-2.py ./data/yourpath  --out_dir ./data/Sentinel2
-
-**GID (GF-2)**
-    
-     python tools/convert_datasets/GF-2.py ./data/yourpath/GID/Large-scale_Classification_5classes/image_NirRGB --out_dir ./data/GID_G2R/ --clip_size 1024 --stride_size 1024
-     python tools/convert_datasets/GF-2.py ./data/yourpath/GID/Large-scale_Classification_5classes/label_5classes --out_dir ./data/GID_G2R/ --clip_size 1024 --stride_size 1024
-
-**CITY-OSM: CHICAGO and PARIS**
-    
-    python tools/convert_datasets/CITY-OSM.py ./data/yourpath/CITY-OSM/paris/ --out_dir ./data/CITY_paris/ --clip_size 512 --stride_size 512
-    python tools/convert_datasets/CITY-OSM.py ./data/yourpath/CITY-OSM/chicago/ --out_dir ./data/CITY_chicago/ --clip_size 512 --stride_size 512
-
-## ST-DASegNet
+## WEA-DINO
 
 ### Install
 
@@ -53,21 +21,12 @@ We select Postsdam, Vaihingen and LoveDA as benchmark datasets and create train,
     
     python >= 3.7
         
-    pytorch >= 1.4
+    pytorch >= 1.7
         
-    cuda >= 10.0
+    cuda >= 11.0
     
-2. prerequisites: Please refer to  [MMSegmentation PREREQUISITES](https://mmsegmentation.readthedocs.io/en/latest/get_started.html).
+2. prerequisites: Please refer to  [MMDetection PREREQUISITES](https://github.com/open-mmlab/mmdetection).
 
-     ```
-     cd ST-DASegNet
-     
-     pip install -e .
-     
-     chmod 777 ./tools/dist_train.sh
-     
-     chmod 777 ./tools/dist_test.sh
-     ```
 
 ### Training
 
