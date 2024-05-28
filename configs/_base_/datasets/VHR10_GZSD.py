@@ -1,6 +1,6 @@
 # dataset settings
-dataset_type = 'DIORGZSDDataset'
-data_root = 'data/DIOR2023_GZSD/'
+dataset_type = 'VHR10GZSDDataset'
+data_root = 'data/VHR10_GZSD/'
 
 backend_args = None
 
