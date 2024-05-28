@@ -1,4 +1,4 @@
-# WEA-DINI
+# WEA-DINO
 
 This repo is the implementation of ["WEA-DINO: An Improved DINO with Word Embedding Alignment for Remote Scene Zero-shot Object Detection"].
 
