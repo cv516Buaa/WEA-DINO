@@ -11,7 +11,7 @@ This repo is the implementation of ["WEA-DINO: An Improved DINO with Word Embedd
 
 ## Dataset Preparation
 
-We select DIOR, PASCAL VOC and NWPU VHR-10 as benchmark datasets. 
+We select DIOR, PASCAL VOC and NWPU VHR-10 as benchmark datasets. Detailed information is shown in supplementary material. 
 
 
 ## WEA-DINO
